@@ -5,7 +5,7 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "ls -lrt"
+      shell: "pwd && ls -lrt"
       register: "output"
 
     - debug: var=output.stdout_lines
