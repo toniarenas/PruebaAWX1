@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: false
+  become: false
+  any_errors_fatal: true
+
+  tasks:
+  - name: Mostrar listado de GitHub Master
+    ansible.builtin.git:
+      repo: "https://github.com/toniarenas/Prueba.git"
+      dest: /tmp/borrar
+      update: yes
+      version: master
