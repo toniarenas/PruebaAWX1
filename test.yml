@@ -15,4 +15,5 @@
   - name: Borrar ficheros de playbook
     ansible.builtin.file:
       dest: /tmp/borrar
+      recurse: yes
       state: absent
