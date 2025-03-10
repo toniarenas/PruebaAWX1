@@ -5,9 +5,14 @@
   any_errors_fatal: true
 
   tasks:
-  - name: Mostrar listado de GitHub Master
+  - name: Copiar ficheros Master
     ansible.builtin.git:
       repo: "https://github.com/toniarenas/Prueba.git"
       dest: /tmp/estaticos
       update: yes
       version: master
+
+  - name: Borrar ficheros de playbook
+    ansible.builtin.file:
+      dest: /tmp/estaticos
+      state: absent
