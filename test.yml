@@ -11,8 +11,3 @@
       dest: /tmp/estaticos
       update: yes
       version: master
-
-  - name: Borrar ficheros de playbook
-    ansible.builtin.file:
-      dest: /tmp/borrar
-      state: absent
