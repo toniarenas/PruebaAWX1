@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: false
-  become: false
+  become: true
   any_errors_fatal: true
 
   tasks:
@@ -15,5 +15,4 @@
   - name: Borrar ficheros de playbook
     ansible.builtin.file:
       dest: /tmp/borrar
-      recurse: yes
       state: absent
